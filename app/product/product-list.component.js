@@ -13,7 +13,7 @@ var ProductListComponent = (function () {
         this.imageWidth = 50;
         this.imageMargin = 2;
         this.showImage = false;
-        this.listFilter = 'cart';
+        this.listFilter = '';
         this.products = [
             {
                 'productId': 2,
@@ -42,6 +42,9 @@ var ProductListComponent = (function () {
     };
     ProductListComponent.prototype.ngOnInit = function () {
         console.log('In OnInit');
+    };
+    ProductListComponent.prototype.onRatingClicked = function (message) {
+        this.pageTitle = 'Product list: ' + message;
     };
     return ProductListComponent;
 }());
