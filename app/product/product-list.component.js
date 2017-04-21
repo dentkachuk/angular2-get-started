@@ -10,6 +10,10 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = 'Product List';
+        this.imageWidth = 50;
+        this.imageMargin = 2;
+        this.showImage = false;
+        this.listFilter = 'cart';
         this.products = [
             {
                 'productId': 2,
@@ -33,13 +37,20 @@ var ProductListComponent = (function () {
             }
         ];
     }
+    ProductListComponent.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
+    ProductListComponent.prototype.ngOnInit = function () {
+        console.log('In OnInit');
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
     core_1.Component({
         selector: 'product-list',
-        templateUrl: 'app/product/product-list.component.html',
-        styleUrls: ['app/product/product-list.component.css']
+        moduleId: module.id,
+        templateUrl: 'product-list.component.html',
+        styleUrls: ['product-list.component.min.css']
     })
 ], ProductListComponent);
 exports.ProductListComponent = ProductListComponent;

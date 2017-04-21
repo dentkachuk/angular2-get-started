@@ -1,1 +1,13 @@
-null
+.panel {
+  border-color: #000;
+}
+
+.panel .panel-heading {
+  background-color: #000;
+}
+
+table tr th {
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 400;
+}
