@@ -3,9 +3,10 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app',
     template: `
-        <div>
+        <div class="container">
             <h1>{{pageTitle}}</h1>
-            <div>My first Component</div>
+            <hr>
+            <product-list></product-list>
         </div>
     `
 })

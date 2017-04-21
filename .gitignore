@@ -1,4 +1,5 @@
 node_modules/
+.idea/
 typings/
 node_modules/bin/
 bower_components/
