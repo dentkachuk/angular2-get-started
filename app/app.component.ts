@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ProductService} from "./product/product.service";
 
 @Component({
     selector: 'app',
@@ -8,7 +9,8 @@ import {Component} from '@angular/core';
             <hr>
             <product-list></product-list>
         </div>
-    `
+    `,
+    providers: [ ProductService ]
 })
 export class AppComponent {
     pageTitle: string = 'Denis Application';
