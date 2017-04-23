@@ -3,3 +3,4 @@ node_modules/
 typings/
 node_modules/bin/
 bower_components/
+*debug.log*
