@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 
@@ -9,18 +7,16 @@ import { ProductDetailComponent } from './product-detail.component';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductService } from './product.service';
 import { ProductDetailGuard } from './product-guard.service';
-import { StarComponent } from '../shared/star.component';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
     declarations: [
         ProductListComponent,
         ProductDetailComponent,
         ProductFilterPipe,
-        StarComponent
     ],
     imports: [
-        FormsModule,
-        CommonModule,
+        SharedModule,
         RouterModule.forChild([
             { path: 'products', component: ProductListComponent },
             { path: 'product/:id',
